@@ -22,15 +22,18 @@ Image versions (tags) can be found on [Docker Hub](https://hub.docker.com/r/yche
 * `curl`
 * `unzip`
 
-## android-emulator-<api-version>.Dockerfile
-Downloads and installs packages required for hardware acceleration with *kvm*, and the Android system image for the `<api-version>`. All system images are `Google APIs Intel x86 Atom`.
+## android-emulator-&lt;api-version&gt;.Dockerfile
+Downloads and installs packages required for hardware acceleration with **kvm**, and the Android system image for the `<api-version>`. All system images are `Google APIs Intel x86 Atom`.
+
+**Note: host machine must support hardware acceleration in the BIOS settings in order to run x86 emulators, which is not the case with most of the hosted CI services.**
 
 ### Image name
-ychescale9/android-emulator-<api-version>
+ychescale9/android-emulator-&lt;api-version&gt;
 
 ### Image version
 Image versions (tags) can be found on Docker Hub:
 * [android-emulator-22](https://hub.docker.com/r/ychescale9/android-emulator-22/tags/)
+* [android-emulator-27](https://hub.docker.com/r/ychescale9/android-emulator-27/tags/)
 * [android-emulator-28](https://hub.docker.com/r/ychescale9/android-emulator-28/tags/)
 
 ### Base image
