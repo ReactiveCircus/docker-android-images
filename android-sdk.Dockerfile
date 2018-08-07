@@ -24,7 +24,7 @@ RUN mkdir "$ANDROID_HOME" .android \
 
 # Install Android build tools and platform tools
 ENV API_LEVEL=28 \
-    ANDROID_BUILD_TOOLS_VERSION=28.0.1
+    ANDROID_BUILD_TOOLS_VERSION=28.0.2
 
 RUN touch ~/.android/repositories.cfg
 RUN $ANDROID_HOME/tools/bin/sdkmanager --update
