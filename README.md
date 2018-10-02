@@ -11,7 +11,7 @@ ychescale9/android-sdk
 Image versions (tags) can be found on [Docker Hub](https://hub.docker.com/r/ychescale9/android-sdk/tags/)
 
 ### Current SDK Versions
-* Build tools - `28.0.2`
+* Build tools - `28.0.3`
 * Platform tools - `28`
 
 ### Base image
