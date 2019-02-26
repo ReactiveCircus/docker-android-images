@@ -27,6 +27,8 @@ Downloads and installs packages required for hardware acceleration with **kvm**,
 
 **Note: host machine must support hardware acceleration in the BIOS settings in order to run x86 emulators, which is not the case with most of the hosted CI services.**
 
+**Update: The [new emulator 28.1.8 Canary](https://androidstudio.googleblog.com/2019/02/emulator-2818-canary.html) introduced a headless emulator build without KVM dependency which is a blocker for running instrumented tests on most cloud CI services as the host machines usually don't have the required bios settings turned on for KVM. The [android-emulator-28.Dockerfile](android-emulator-28.Dockerfile) has been updated to the canary build for experimenting with this. [Related discussion with the Android Emulator Team on reddit](https://www.reddit.com/r/androiddev/comments/atm3im/emulator_2818_canary/eh6uv01/?context=8&depth=9)**
+
 ### Image name
 ychescale9/android-emulator-&lt;api-version&gt;
 
