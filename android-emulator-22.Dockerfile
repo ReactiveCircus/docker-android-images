@@ -1,4 +1,4 @@
-FROM ychescale9/android-sdk:latest
+FROM reactivecircus/android-sdk:latest
 
 # Install packages
 RUN apt-get -qqy update && \

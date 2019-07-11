@@ -5,10 +5,10 @@ Docker images for Android SDK and Emulators
 Downloads the Android SDK and installs build tools and platform tools.
 
 ### Image name
-ychescale9/android-sdk
+reactivecircus/android-sdk
 
 ### Image version
-Image versions (tags) can be found on [Docker Hub](https://hub.docker.com/r/ychescale9/android-sdk/tags/)
+Image versions (tags) can be found on [Docker Hub](https://hub.docker.com/r/reactivecircus/android-sdk/tags/)
 
 ### Current SDK Versions
 * Build tools - `29.0.0`
@@ -40,7 +40,7 @@ Image versions (tags) can be found on Docker Hub:
 * [android-emulator-28](https://hub.docker.com/r/ychescale9/android-emulator-28/tags/)
 
 ### Base image
-`ychescale9/android-sdk:<latest-image-version>`
+`reactivecircus/android-sdk:<latest-image-version>`
 
 ### Included packages
 * `qemu-kvm`

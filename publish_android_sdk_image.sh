@@ -5,8 +5,8 @@ set -euo pipefail
 IMAGE_VERSION=`date "+v%Y_%m_%d-%H-%M-%S"`
 
 # build the docker image with new version and tag
-docker build -t ychescale9/android-sdk:latest -t ychescale9/android-sdk:${IMAGE_VERSION}  -f android-sdk.Dockerfile .
+docker build -t reactivecircus/android-sdk:latest -t reactivecircus/android-sdk:${IMAGE_VERSION}  -f android-sdk.Dockerfile .
 
 # publish to Docker Hub
-docker push ychescale9/android-sdk:${IMAGE_VERSION}
-docker push ychescale9/android-sdk:latest
+docker push reactivecircus/android-sdk:${IMAGE_VERSION}
+docker push reactivecircus/android-sdk:latest
