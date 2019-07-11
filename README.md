@@ -11,7 +11,7 @@ reactivecircus/android-sdk
 Image versions (tags) can be found on [Docker Hub](https://hub.docker.com/r/reactivecircus/android-sdk/tags/)
 
 ### Current SDK Versions
-* Build tools - `29.0.0`
+* Build tools - `29.0.1`
 * Platform tools - `29`
 
 ### Base image
