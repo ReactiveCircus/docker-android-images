@@ -8,7 +8,7 @@ Downloads the Android SDK and installs build tools and platform tools.
 
 ### Image name
 
-reactivecircus/android-sdk
+`reactivecircus/android-sdk`
 
 ### Image version
 
@@ -45,7 +45,7 @@ The [new emulator 28.1.8 Canary](https://androidstudio.googleblog.com/2019/02/em
 
 ### Image name
 
-ychescale9/android-emulator-&lt;api-version&gt;
+`ychescale9/android-emulator-<api-version>`
 
 ### Image version
 
