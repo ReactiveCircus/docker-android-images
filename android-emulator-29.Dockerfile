@@ -9,13 +9,14 @@ RUN apt-get -qqy update && \
 ENV PROCESSOR=x86 \
     SYS_IMG=x86_64 \
     IMG_TYPE=google_apis \
-    API_LEVEL_28=28
+    API_LEVEL_29=29
 
 # Accept all licenses
 RUN yes | $ANDROID_HOME/tools/bin/sdkmanager --licenses
 
-# API 28 system image
-RUN $ANDROID_HOME/tools/bin/sdkmanager --update
-RUN $ANDROID_HOME/tools/bin/sdkmanager "system-images;android-${API_LEVEL_28};${IMG_TYPE};${SYS_IMG}" \
-    "platforms;android-${API_LEVEL_28}" \
+# API 29 system image
+# TODO remove after Q release
+RUN echo "y" | $ANDROID_HOME/tools/bin/sdkmanager --update --channel=3
+RUN $ANDROID_HOME/tools/bin/sdkmanager "system-images;android-${API_LEVEL_29};${IMG_TYPE};${SYS_IMG}" \
+    "platforms;android-${API_LEVEL_29}" \
     "emulator"
