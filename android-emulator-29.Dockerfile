@@ -15,8 +15,7 @@ ENV PROCESSOR=x86 \
 RUN yes | $ANDROID_HOME/tools/bin/sdkmanager --licenses
 
 # API 29 system image
-# TODO remove after Q release
-RUN echo "y" | $ANDROID_HOME/tools/bin/sdkmanager --update --channel=3
+RUN $ANDROID_HOME/tools/bin/sdkmanager --update
 RUN $ANDROID_HOME/tools/bin/sdkmanager "system-images;android-${API_LEVEL_29};${IMG_TYPE};${SYS_IMG}" \
     "platforms;android-${API_LEVEL_29}" \
     "emulator"
