@@ -43,6 +43,10 @@ The [new emulator 28.1.8 Canary](https://androidstudio.googleblog.com/2019/02/em
 
 `emulator-headless` has been released to stable channel for a few months but is still not practically usable in a CI environment with limited memory.
 
+### Update 3 (02/11/2019)
+
+`emulator-headless` is retired in [Emulator 29.2.7 Canary](https://androidstudio.googleblog.com/2019/11/emulator-2927-canary.html). Headless emulator can be launched with `emulator -no-window`.
+
 ### Image name
 
 `ychescale9/android-emulator-<api-version>`
