@@ -17,7 +17,7 @@ jobs:
       with:
         fetch-depth: 1
     - name: Docker login
-      run: docker login --username=$DOCKER_USER --password=$DOCKER_TOKEN
+      run: echo "$DOCKER_TOKEN" | docker login --username=$DOCKER_USER --password-stdin
       env:
         DOCKER_USER: ${{ secrets.DOCKER_USER }}
         DOCKER_TOKEN: ${{ secrets.DOCKER_TOKEN }}
@@ -36,7 +36,7 @@ jobs:
       with:
         fetch-depth: 1
     - name: Docker login
-      run: docker login --username=$DOCKER_USER --password=$DOCKER_TOKEN
+      run: echo "$DOCKER_TOKEN" | docker login --username=$DOCKER_USER --password-stdin
       env:
         DOCKER_USER: ${{ secrets.DOCKER_USER }}
         DOCKER_TOKEN: ${{ secrets.DOCKER_TOKEN }}
