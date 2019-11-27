@@ -2,14 +2,7 @@ FROM reactivecircus/android-sdk:latest
 
 # Install packages
 RUN apt-get -qqy update && \
-    apt-get -qqy --no-install-recommends install \
-    qemu-kvm \
-    libvirt-bin \
-    ubuntu-vm-builder \
-    bridge-utils \
-    virtinst \
-    cpu-checker \
-    lib32stdc++6 \
+    apt-get -qqy --no-install-recommends install libc++1 \
   && rm -rf /var/lib/apt/lists/*
 
 # Install system images
@@ -19,7 +12,6 @@ ENV PROCESSOR=x86 \
     API_LEVEL_22=22
 
 # API 22 system image
-RUN echo "y" | $ANDROID_HOME/tools/bin/sdkmanager "system-images;android-${API_LEVEL_22};${IMG_TYPE};${SYS_IMG}" \
+RUN $ANDROID_HOME/tools/bin/sdkmanager --install "system-images;android-${API_LEVEL_22};${IMG_TYPE};${SYS_IMG}" \
     "platforms;android-${API_LEVEL_22}" \
     "emulator"
-

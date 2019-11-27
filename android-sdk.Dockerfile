@@ -1,5 +1,4 @@
-FROM ubuntu:16.04
-
+FROM ubuntu:bionic
 # Install packages
 RUN apt-get -qqy update && \
     apt-get -qqy --no-install-recommends install \
@@ -11,7 +10,7 @@ RUN apt-get -qqy update && \
 ENV JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64/jre" \
     PATH=$PATH:$JAVA_HOME/bin
 
-ENV SDK_URL="https://dl.google.com/android/repository/sdk-tools-linux-3859397.zip"
+ENV SDK_URL="https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip"
 ENV ANDROID_HOME="/usr/local/android-sdk"
 
 # Download Android SDK
@@ -29,7 +28,6 @@ ENV API_LEVEL=29 \
     ANDROID_BUILD_TOOLS_VERSION=29.0.2
 
 RUN touch ~/.android/repositories.cfg
-RUN $ANDROID_HOME/tools/bin/sdkmanager --update
-RUN $ANDROID_HOME/tools/bin/sdkmanager "build-tools;${ANDROID_BUILD_TOOLS_VERSION}" \
+RUN $ANDROID_HOME/tools/bin/sdkmanager --install "build-tools;${ANDROID_BUILD_TOOLS_VERSION}" \
     "platforms;android-${API_LEVEL}" \
     "platform-tools"

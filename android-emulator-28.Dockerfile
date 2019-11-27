@@ -11,11 +11,7 @@ ENV PROCESSOR=x86 \
     IMG_TYPE=google_apis \
     API_LEVEL_28=28
 
-# Accept all licenses
-RUN yes | $ANDROID_HOME/tools/bin/sdkmanager --licenses
-
 # API 28 system image
-RUN $ANDROID_HOME/tools/bin/sdkmanager --update
-RUN $ANDROID_HOME/tools/bin/sdkmanager "system-images;android-${API_LEVEL_28};${IMG_TYPE};${SYS_IMG}" \
+RUN $ANDROID_HOME/tools/bin/sdkmanager --install "system-images;android-${API_LEVEL_28};${IMG_TYPE};${SYS_IMG}" \
     "platforms;android-${API_LEVEL_28}" \
     "emulator"

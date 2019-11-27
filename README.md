@@ -33,7 +33,7 @@ Image versions (tags) can be found on [Docker Hub](https://hub.docker.com/r/reac
 
 Downloads and installs packages required for hardware acceleration with **kvm**, and the Android system image for the `<api-version>`. All system images are `Google APIs Intel x86 Atom`.
 
-**Note: host machine must support hardware acceleration in the BIOS settings in order to run x86 emulators, which is not the case with most of the hosted CI services.**
+**Note: host machine must support KVM in order to run accelerated x86 or x86_64 emulators.**
 
 ### Update 1 (26/02/2019)
 
@@ -49,20 +49,27 @@ The [new emulator 28.1.8 Canary](https://androidstudio.googleblog.com/2019/02/em
 
 ### Image name
 
-`ychescale9/android-emulator-<api-version>`
+`reactivecircus/android-emulator-<api-version>`
 
-### Image version
+### Images and configurations
 
-Image versions (tags) can be found on Docker Hub:
-* [android-emulator-22](https://hub.docker.com/r/ychescale9/android-emulator-22/tags/)
-* [android-emulator-23](https://hub.docker.com/r/ychescale9/android-emulator-23/tags/)
-* [android-emulator-27](https://hub.docker.com/r/ychescale9/android-emulator-27/tags/)
-* [android-emulator-28](https://hub.docker.com/r/reactivecircus/android-emulator-28/tags/)
-* [android-emulator-29](https://hub.docker.com/r/reactivecircus/android-emulator-29/tags/)
+The following images are available on Docker Hub:
+
+|  | Image on Docker Hub | API level | Target | CPU / ABI |
+|---|------------------------------------------------------------------------------------------|-----------|-------------|-----------|
+|  | [android-emulator-21](https://hub.docker.com/r/reactivecircus/android-emulator-21/tags/) | 21 | google_apis | x86 |
+|  | [android-emulator-22](https://hub.docker.com/r/reactivecircus/android-emulator-22/tags/) | 22 | google_apis | x86 |
+|  | [android-emulator-23](https://hub.docker.com/r/reactivecircus/android-emulator-23/tags/) | 23 | google_apis | x86 |
+|  | [android-emulator-24](https://hub.docker.com/r/reactivecircus/android-emulator-24/tags/) | 24 | google_apis | x86 |
+|  | [android-emulator-25](https://hub.docker.com/r/reactivecircus/android-emulator-25/tags/) | 25 | google_apis | x86 |
+|  | [android-emulator-26](https://hub.docker.com/r/reactivecircus/android-emulator-26/tags/) | 26 | google_apis | x86 |
+|  | [android-emulator-27](https://hub.docker.com/r/reactivecircus/android-emulator-27/tags/) | 27 | google_apis | x86 |
+|  | [android-emulator-28](https://hub.docker.com/r/reactivecircus/android-emulator-28/tags/) | 28 | google_apis | x86_64 |
+|  | [android-emulator-29](https://hub.docker.com/r/reactivecircus/android-emulator-29/tags/) | 29 | google_apis | x86_64 |
 
 ### Base image
 
-`reactivecircus/android-sdk:<latest-image-version>`
+`reactivecircus/android-sdk:latest`
 
 ### Included packages
 
