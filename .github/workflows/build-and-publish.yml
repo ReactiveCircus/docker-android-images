@@ -1,0 +1,44 @@
+name: Build and Publish Images
+
+on:
+  push:
+    branches: 
+      - master
+    paths-ignore:
+      - '**/README.md'
+
+jobs:
+  publish-sdk-image:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+      with:
+        fetch-depth: 1
+    - name: Docker login
+      run: docker login --username=$DOCKER_USER --password=$DOCKER_TOKEN
+      env:
+        DOCKER_USER: ${{ secrets.DOCKER_USER }}
+        DOCKER_TOKEN: ${{ secrets.DOCKER_TOKEN }}
+    - name: Build and publish android-sdk.Dockerfile
+      run: sh publish_android_sdk_image.sh
+
+  publish-emulator-image:
+
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        api-level: [21, 22, 23, 24, 25, 26, 27, 28, 29]
+
+    steps:
+    - uses: actions/checkout@v1
+      with:
+        fetch-depth: 1
+    - name: Docker login
+      run: docker login --username=$DOCKER_USER --password=$DOCKER_TOKEN
+      env:
+        DOCKER_USER: ${{ secrets.DOCKER_USER }}
+        DOCKER_TOKEN: ${{ secrets.DOCKER_TOKEN }}
+    - name: Build and publish android-emulator-${{ matrix.api-level }}.Dockerfile
+      run: sh publish_android_emulator_image.sh ${{ matrix.api-level }}
