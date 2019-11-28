@@ -11,6 +11,6 @@ ENV ARCH=x86_64 \
     API_LEVEL_28=28
 
 # API 28 system image
-RUN $ANDROID_HOME/tools/bin/sdkmanager --install "system-images;android-${API_LEVEL_28};${TARGET};${ARCH}" \
+RUN sdkmanager --install "system-images;android-${API_LEVEL_28};${TARGET};${ARCH}" \
     "platforms;android-${API_LEVEL_28}" \
     "emulator"

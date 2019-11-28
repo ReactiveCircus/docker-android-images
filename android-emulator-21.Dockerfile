@@ -11,6 +11,6 @@ ENV ARCH=x86 \
     API_LEVEL_21=21
 
 # API 21 system image
-RUN $ANDROID_HOME/tools/bin/sdkmanager --install "system-images;android-${API_LEVEL_21};${TARGET};${ARCH}" \
+RUN sdkmanager --install "system-images;android-${API_LEVEL_21};${TARGET};${ARCH}" \
     "platforms;android-${API_LEVEL_21}" \
     "emulator"
