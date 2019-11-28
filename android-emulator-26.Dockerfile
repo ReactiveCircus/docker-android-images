@@ -7,7 +7,7 @@ RUN apt-get -qqy update && \
 
 # Install system images
 ENV ARCH=x86 \
-    TARGET=google_apis \
+    TARGET=default \
     EMULATOR_API_LEVEL=26
 
 # API 26 system image

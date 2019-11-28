@@ -44,16 +44,16 @@ Downloads and installs packages required for hardware acceleration with **kvm**,
 The following images are available on Docker Hub:
 
 |  | Image on Docker Hub | API level | Target | CPU / ABI |
-|---|------------------------------------------------------------------------------------------|-----------|-------------|-----------|
-|  | [android-emulator-21](https://hub.docker.com/r/reactivecircus/android-emulator-21/tags/) | 21 | google_apis | x86 |
-|  | [android-emulator-22](https://hub.docker.com/r/reactivecircus/android-emulator-22/tags/) | 22 | google_apis | x86 |
-|  | [android-emulator-23](https://hub.docker.com/r/reactivecircus/android-emulator-23/tags/) | 23 | google_apis | x86 |
-|  | [android-emulator-24](https://hub.docker.com/r/reactivecircus/android-emulator-24/tags/) | 24 | google_apis | x86 |
-|  | [android-emulator-25](https://hub.docker.com/r/reactivecircus/android-emulator-25/tags/) | 25 | google_apis | x86 |
-|  | [android-emulator-26](https://hub.docker.com/r/reactivecircus/android-emulator-26/tags/) | 26 | google_apis | x86 |
-|  | [android-emulator-27](https://hub.docker.com/r/reactivecircus/android-emulator-27/tags/) | 27 | google_apis | x86 |
-|  | [android-emulator-28](https://hub.docker.com/r/reactivecircus/android-emulator-28/tags/) | 28 | google_apis | x86_64 |
-|  | [android-emulator-29](https://hub.docker.com/r/reactivecircus/android-emulator-29/tags/) | 29 | google_apis | x86_64 |
+|---|------------------------------------------------------------------------------------------|-----------|---------|-----------|
+|  | [android-emulator-21](https://hub.docker.com/r/reactivecircus/android-emulator-21/tags/) | 21 | default | x86 |
+|  | [android-emulator-22](https://hub.docker.com/r/reactivecircus/android-emulator-22/tags/) | 22 | default | x86 |
+|  | [android-emulator-23](https://hub.docker.com/r/reactivecircus/android-emulator-23/tags/) | 23 | default | x86 |
+|  | [android-emulator-24](https://hub.docker.com/r/reactivecircus/android-emulator-24/tags/) | 24 | default | x86 |
+|  | [android-emulator-25](https://hub.docker.com/r/reactivecircus/android-emulator-25/tags/) | 25 | default | x86 |
+|  | [android-emulator-26](https://hub.docker.com/r/reactivecircus/android-emulator-26/tags/) | 26 | default | x86 |
+|  | [android-emulator-27](https://hub.docker.com/r/reactivecircus/android-emulator-27/tags/) | 27 | default | x86 |
+|  | [android-emulator-28](https://hub.docker.com/r/reactivecircus/android-emulator-28/tags/) | 28 | default | x86_64 |
+|  | [android-emulator-29](https://hub.docker.com/r/reactivecircus/android-emulator-29/tags/) | 29 | default | x86_64 |
 
 ### Base image
 
