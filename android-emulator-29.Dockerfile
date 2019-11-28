@@ -8,9 +8,9 @@ RUN apt-get -qqy update && \
 # Install system images
 ENV ARCH=x86_64 \
     TARGET=google_apis \
-    API_LEVEL_29=29
+    EMULATOR_API_LEVEL=29
 
 # API 29 system image
-RUN sdkmanager --install "system-images;android-${API_LEVEL_29};${TARGET};${ARCH}" \
-    "platforms;android-${API_LEVEL_29}" \
+RUN sdkmanager --install "system-images;android-${EMULATOR_API_LEVEL};${TARGET};${ARCH}" \
+    "platforms;android-${EMULATOR_API_LEVEL}" \
     "emulator"
