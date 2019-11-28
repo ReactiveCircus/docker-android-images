@@ -52,8 +52,8 @@ The following images are available on Docker Hub:
 |  | [android-emulator-25](https://hub.docker.com/r/reactivecircus/android-emulator-25/tags/) | 25 | default | x86 |
 |  | [android-emulator-26](https://hub.docker.com/r/reactivecircus/android-emulator-26/tags/) | 26 | default | x86 |
 |  | [android-emulator-27](https://hub.docker.com/r/reactivecircus/android-emulator-27/tags/) | 27 | default | x86 |
-|  | [android-emulator-28](https://hub.docker.com/r/reactivecircus/android-emulator-28/tags/) | 28 | default | x86_64 |
-|  | [android-emulator-29](https://hub.docker.com/r/reactivecircus/android-emulator-29/tags/) | 29 | default | x86_64 |
+|  | [android-emulator-28](https://hub.docker.com/r/reactivecircus/android-emulator-28/tags/) | 28 | default | x86 |
+|  | [android-emulator-29](https://hub.docker.com/r/reactivecircus/android-emulator-29/tags/) | 29 | default | x86 |
 
 ### Base image
 
