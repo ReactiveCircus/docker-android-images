@@ -6,7 +6,7 @@ RUN apt-get -qqy update && \
   && rm -rf /var/lib/apt/lists/*
 
 # Install system images
-ENV ARCH=x86_64 \
+ENV ARCH=x86 \
     TARGET=default \
     EMULATOR_API_LEVEL=28
 
