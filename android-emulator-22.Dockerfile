@@ -6,12 +6,11 @@ RUN apt-get -qqy update && \
   && rm -rf /var/lib/apt/lists/*
 
 # Install system images
-ENV PROCESSOR=x86 \
-    SYS_IMG=x86 \
-    IMG_TYPE=google_apis \
+ENV ARCH=x86 \
+    TARGET=google_apis \
     API_LEVEL_22=22
 
 # API 22 system image
-RUN $ANDROID_HOME/tools/bin/sdkmanager --install "system-images;android-${API_LEVEL_22};${IMG_TYPE};${SYS_IMG}" \
+RUN $ANDROID_HOME/tools/bin/sdkmanager --install "system-images;android-${API_LEVEL_22};${TARGET};${ARCH}" \
     "platforms;android-${API_LEVEL_22}" \
     "emulator"
