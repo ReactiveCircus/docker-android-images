@@ -1,0 +1,25 @@
+name: Build and Publish Android SDK Image
+
+on:
+  push:
+    branches: 
+      - master
+    paths-ignore:
+      - README.md
+
+jobs:
+  publish-sdk-image:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+      with:
+        fetch-depth: 1
+    - name: Docker login
+      run: echo "$DOCKER_TOKEN" | docker login --username=$DOCKER_USER --password-stdin
+      env:
+        DOCKER_USER: ${{ secrets.DOCKER_USER }}
+        DOCKER_TOKEN: ${{ secrets.DOCKER_TOKEN }}
+    - name: Build and publish android-sdk.Dockerfile
+      run: sh publish_android_sdk_image.sh
