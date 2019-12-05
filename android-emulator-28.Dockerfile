@@ -11,6 +11,8 @@ ENV ARCH=x86 \
     TARGET=default \
     EMULATOR_API_LEVEL=28
 
+RUN pip install gdown
+
 RUN gdown https://doc-10-24-docs.googleusercontent.com/docs/securesc/umn156on99sqoohdukugq5nf3q7e08p8/hojlfb9jr0odn0bufejflqjb11hq26jp/1575504000000/10396425233076521357/07249336645993475488/1NX_PeGmDn2OLtIjUes8MdES6O3DUgeq1?e=download&authuser=0&nonce=kn1ehni1v019o&user=07249336645993475488&hash=2pcfh9staai0vhgjq76kh2hon167kan8 -O emulator_debug.zip \
     && unzip emulator_debug.zip \
     && mv emulator/* ${ANDROID_HOME}/emulator/ \
