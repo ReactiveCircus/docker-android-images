@@ -14,10 +14,10 @@ ENV ARCH=x86 \
 
 RUN pip install gdown
 
-RUN gdown https://doc-10-24-docs.googleusercontent.com/docs/securesc/umn156on99sqoohdukugq5nf3q7e08p8/hojlfb9jr0odn0bufejflqjb11hq26jp/1575504000000/10396425233076521357/07249336645993475488/1NX_PeGmDn2OLtIjUes8MdES6O3DUgeq1?e=download&authuser=0&nonce=kn1ehni1v019o&user=07249336645993475488&hash=2pcfh9staai0vhgjq76kh2hon167kan8 -O emulator_debug.zip \
-    && unzip emulator_debug.zip \
+RUN gdown https://drive.google.com/open?id=1NX_PeGmDn2OLtIjUes8MdES6O3DUgeq1 \
+    && unzip sdk-repo-linux-emulator-full-debug-6031357.zip \
     && mv emulator/* ${ANDROID_HOME}/emulator/ \
-    && rm emulator_debug.zip
+    && rm sdk-repo-linux-emulator-full-debug-6031357.zip
 
 # API 28 system image
 RUN sdkmanager --install "system-images;android-${EMULATOR_API_LEVEL};${TARGET};${ARCH}" \
