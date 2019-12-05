@@ -14,7 +14,7 @@ ENV ARCH=x86 \
 
 RUN pip install gdown
 
-RUN gdown https://drive.google.com/open?id=1NX_PeGmDn2OLtIjUes8MdES6O3DUgeq1 \
+RUN gdown https://drive.google.com/uc?id=1NX_PeGmDn2OLtIjUes8MdES6O3DUgeq1 \
     && unzip sdk-repo-linux-emulator-full-debug-6031357.zip \
     && mv emulator/* ${ANDROID_HOME}/emulator/ \
     && rm sdk-repo-linux-emulator-full-debug-6031357.zip
