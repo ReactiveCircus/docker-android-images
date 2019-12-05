@@ -16,7 +16,7 @@ RUN pip install gdown
 
 RUN gdown https://drive.google.com/uc?id=1NX_PeGmDn2OLtIjUes8MdES6O3DUgeq1 \
     && unzip sdk-repo-linux-emulator-full-debug-6031357.zip \
-    && mv emulator/* ${ANDROID_HOME}/emulator/ \
+    && mv emulator/ ${ANDROID_HOME}/ \
     && rm sdk-repo-linux-emulator-full-debug-6031357.zip
 
 # API 28 system image
