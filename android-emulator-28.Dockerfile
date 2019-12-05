@@ -3,7 +3,7 @@ FROM reactivecircus/android-sdk:latest
 # Install packages
 RUN apt-get -qqy update && \
     apt-get -qqy --no-install-recommends install libc++1 \
-    apt-get install -y python-pip \
+    python-pip \
   && rm -rf /var/lib/apt/lists/*
 
 # Install system images
