@@ -5,6 +5,7 @@ RUN apt-get -qqy update && \
     apt-get -qqy --no-install-recommends install libc++1 \
     python-setuptools \
     python-pip \
+    llvm \
   && rm -rf /var/lib/apt/lists/*
 
 # Install system images
