@@ -3,7 +3,13 @@ FROM reactivecircus/android-sdk:latest
 # Install packages
 RUN apt-get -qqy update && \
     apt-get -qqy --no-install-recommends install libc++1 \
-  && rm -rf /var/lib/apt/lists/*
+    curl ca-certificates && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
+# Open ADB port
+EXPOSE 5555
+EXPOSE 5556
 
 # Install system images
 ENV ARCH=x86 \
