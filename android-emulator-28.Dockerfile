@@ -3,12 +3,14 @@ FROM reactivecircus/android-sdk:latest
 # Install packages
 RUN apt-get -qqy update && \
     apt-get -qqy --no-install-recommends install libc++1 \
+    llvm \
     python-setuptools \
     python-pip \
     libc6 libdbus-1-3 libfontconfig1 libgcc1 \
     libpulse0 libtinfo5 libx11-6 libxcb1 libxdamage1 \
     libnss3 libxcomposite1 libxcursor1 libxi6 \
     libxext6 libxfixes3 zlib1g libgl1 pulseaudio socat \
+    gdb \
     curl ca-certificates && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
