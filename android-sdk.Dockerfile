@@ -29,7 +29,7 @@ RUN yes | sdkmanager --licenses
 
 # Install Android build tools and platform tools
 ENV API_LEVEL=29 \
-    ANDROID_BUILD_TOOLS_VERSION=29.0.2
+    ANDROID_BUILD_TOOLS_VERSION=29.0.3
 
 RUN touch ~/.android/repositories.cfg
 RUN sdkmanager --install "build-tools;${ANDROID_BUILD_TOOLS_VERSION}" \
