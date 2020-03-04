@@ -3,26 +3,27 @@ FROM ubuntu:bionic
 # Install packages
 RUN apt-get -qqy update && \
     apt-get -qqy --no-install-recommends install \
-    openjdk-8-jdk \
+    openjdk-11-jdk \
     curl \
     unzip \
   && rm -rf /var/lib/apt/lists/*
 
-ENV JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64/jre" \
+ENV JAVA_HOME="/usr/lib/jvm/java-11-openjdk-amd64/" \
     PATH=$PATH:$JAVA_HOME/bin
 
-ENV SDK_URL="https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip"
+ENV CMDLINE_TOOLS_URL="https://dl.google.com/android/repository/commandlinetools-linux-6200805_latest.zip"
 ENV ANDROID_HOME="/usr/local/android-sdk"
 
 ENV ANDROID_SDK_ROOT=$ANDROID_HOME \
-    PATH=${PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/tools/bin:${ANDROID_HOME}/platform-tools
+    PATH=${PATH}:${ANDROID_HOME}/cmdline-tools/tools:${ANDROID_HOME}/cmdline-tools/tools/bin:${ANDROID_HOME}/platform-tools
 
 # Download Android SDK
 RUN mkdir "$ANDROID_HOME" .android \
     && cd "$ANDROID_HOME" \
-    && curl -o sdk.zip $SDK_URL \
-    && unzip sdk.zip \
-    && rm sdk.zip
+    && mkdir cmdline-tools \
+    && curl -o cmdline-tools/commandlinetools.zip $CMDLINE_TOOLS_URL \
+    && unzip cmdline-tools/commandlinetools.zip -d cmdline-tools \
+    && rm cmdline-tools/commandlinetools.zip
 
 # Accept all licenses
 RUN yes | sdkmanager --licenses

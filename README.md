@@ -21,11 +21,11 @@ Image versions (tags) can be found on [Docker Hub](https://hub.docker.com/r/reac
 
 ### Base image
 
-`ubuntu:16.04`
+`ubuntu:bionic`
 
 ### Included packages
 
-* `openjdk-8-jdk`
+* `openjdk-11-jdk`
 * `curl`
 * `unzip`
 
