@@ -3,12 +3,12 @@ FROM ubuntu:bionic
 # Install packages
 RUN apt-get -qqy update && \
     apt-get -qqy --no-install-recommends install \
-    openjdk-11-jdk \
+    openjdk-8-jdk \
     curl \
     unzip \
   && rm -rf /var/lib/apt/lists/*
 
-ENV JAVA_HOME="/usr/lib/jvm/java-11-openjdk-amd64/" \
+ENV JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64/" \
     PATH=$PATH:$JAVA_HOME/bin
 
 ENV CMDLINE_TOOLS_URL="https://dl.google.com/android/repository/commandlinetools-linux-6200805_latest.zip"
