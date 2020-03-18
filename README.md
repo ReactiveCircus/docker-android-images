@@ -27,6 +27,7 @@ Image versions (tags) can be found on [Docker Hub](https://hub.docker.com/r/reac
 
 * `openjdk-8-jdk`
 * `curl`
+* `zip`
 * `unzip`
 * `git`
 * `openssh-client`

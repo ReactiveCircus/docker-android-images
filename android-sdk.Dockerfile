@@ -5,6 +5,7 @@ RUN apt-get -qqy update && \
     apt-get -qqy --no-install-recommends install \
     openjdk-8-jdk \
     curl \
+    zip \
     unzip \
     git \
     openssh-client \
