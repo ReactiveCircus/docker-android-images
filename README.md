@@ -28,6 +28,7 @@ Image versions (tags) can be found on [Docker Hub](https://hub.docker.com/r/reac
 * `openjdk-8-jdk`
 * `curl`
 * `unzip`
+* `git`
 
 ## Android Emulator Images
 
