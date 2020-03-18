@@ -9,6 +9,10 @@ RUN apt-get -qqy update && \
     git \
   && rm -rf /var/lib/apt/lists/*
 
+# Use unicode
+RUN locale-gen C.UTF-8 || true
+ENV LANG=C.UTF-8
+
 ENV JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64/" \
     PATH=$PATH:$JAVA_HOME/bin
 
