@@ -8,7 +8,6 @@ RUN apt-get -qqy update && \
     zip \
     unzip \
     git \
-    openssh-client \
   && rm -rf /var/lib/apt/lists/*
 
 # Use unicode
