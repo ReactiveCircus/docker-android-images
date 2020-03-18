@@ -29,6 +29,7 @@ Image versions (tags) can be found on [Docker Hub](https://hub.docker.com/r/reac
 * `curl`
 * `unzip`
 * `git`
+* `openssh-client`
 
 ## Android Emulator Images
 
