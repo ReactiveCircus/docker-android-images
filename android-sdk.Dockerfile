@@ -2,10 +2,7 @@ FROM ubuntu:bionic
 
 # Install packages
 RUN apt-get -qqy update && \
-    apt-get -qqy install software-properties-common && \
-    add-apt-repository ppa:git-core/ppa -qqy && \
     apt-get -qqy --no-install-recommends install \
-    apt-utils \
     openjdk-8-jdk \
     curl \
     zip \
