@@ -17,7 +17,7 @@ ENV LANG=C.UTF-8
 ENV JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64/" \
     PATH=$PATH:$JAVA_HOME/bin
 
-ENV CMDLINE_TOOLS_URL="https://dl.google.com/android/repository/commandlinetools-linux-6200805_latest.zip"
+ENV CMDLINE_TOOLS_URL="https://dl.google.com/android/repository/commandlinetools-linux-6514223_latest.zip"
 ENV ANDROID_HOME="/usr/local/android-sdk"
 
 ENV ANDROID_SDK_ROOT=$ANDROID_HOME \
