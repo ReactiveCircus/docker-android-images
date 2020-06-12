@@ -13,7 +13,7 @@ EXPOSE 5556
 
 # Install system images
 ENV ARCH=x86 \
-    TARGET=default \
+    TARGET=google_apis \
     EMULATOR_API_LEVEL=30
 
 # API 30 system image
