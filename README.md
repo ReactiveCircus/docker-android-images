@@ -16,8 +16,8 @@ Image versions (tags) can be found on [Docker Hub](https://hub.docker.com/r/reac
 
 ### Current SDK Versions
 
-* Build tools - `29.0.3`
-* Platform tools - `29`
+* Build tools - `30.0.0`
+* Platform - `29`
 
 ### Base image
 
@@ -56,6 +56,7 @@ The following images are available on Docker Hub:
 |  | [android-emulator-27](https://hub.docker.com/r/reactivecircus/android-emulator-27/tags/) | 27 | default | x86 |
 |  | [android-emulator-28](https://hub.docker.com/r/reactivecircus/android-emulator-28/tags/) | 28 | default | x86 |
 |  | [android-emulator-29](https://hub.docker.com/r/reactivecircus/android-emulator-29/tags/) | 29 | default | x86 |
+|  | [android-emulator-30](https://hub.docker.com/r/reactivecircus/android-emulator-30/tags/) | 30 | google_apis | x86 |
 
 ### Base image
 
