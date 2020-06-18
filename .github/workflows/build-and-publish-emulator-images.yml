@@ -5,7 +5,7 @@ on:
     - cron:  '0 0 * * 3' # build and publish emulator images every Wednesday
   push:
     branches: 
-      - master
+      - main
     paths-ignore:
       - README.md
 
