@@ -2,22 +2,21 @@
 
 Docker images for Android SDK and Emulators
 
-## Android SDK Image
+## Android SDK Base Image
 
 Downloads the Android SDK and installs build tools and platform tools.
 
 ### Image name
 
-`reactivecircus/android-sdk`
+`reactivecircus/android-sdk-base`
 
 ### Image version
 
-Image versions (tags) can be found on [Docker Hub](https://hub.docker.com/r/reactivecircus/android-sdk/tags/)
+Image versions (tags) can be found on [Docker Hub](https://hub.docker.com/r/reactivecircus/android-sdk-base/tags/)
 
 ### Current SDK Versions
 
 * Build tools - `30.0.0`
-* Platform - `29`
 
 ### Base image
 
@@ -30,6 +29,33 @@ Image versions (tags) can be found on [Docker Hub](https://hub.docker.com/r/reac
 * `zip`
 * `unzip`
 * `git`
+
+## Android SDK Images
+
+Downloads Android SDK platform for a specific API level.
+
+### Image name
+
+`reactivecircus/android-sdk-<api-level>`
+
+### Availabel Images
+
+The following images are available on Docker Hub:
+
+- [android-emulator-21](https://hub.docker.com/r/reactivecircus/android-sdk-21/tags/)
+- [android-emulator-22](https://hub.docker.com/r/reactivecircus/android-sdk-22/tags/)
+- [android-emulator-23](https://hub.docker.com/r/reactivecircus/android-sdk-23/tags/)
+- [android-emulator-24](https://hub.docker.com/r/reactivecircus/android-sdk-24/tags/)
+- [android-emulator-25](https://hub.docker.com/r/reactivecircus/android-sdk-25/tags/)
+- [android-emulator-26](https://hub.docker.com/r/reactivecircus/android-sdk-26/tags/)
+- [android-emulator-27](https://hub.docker.com/r/reactivecircus/android-sdk-27/tags/)
+- [android-emulator-28](https://hub.docker.com/r/reactivecircus/android-sdk-28/tags/)
+- [android-emulator-29](https://hub.docker.com/r/reactivecircus/android-sdk-29/tags/)
+- [android-emulator-30](https://hub.docker.com/r/reactivecircus/android-sdk-30/tags/)
+
+### Base image
+
+`reactivecircus/android-sdk-base:latest`
 
 ## Android Emulator Images
 
@@ -60,7 +86,7 @@ The following images are available on Docker Hub:
 
 ### Base image
 
-`reactivecircus/android-sdk:latest`
+`reactivecircus/android-sdk-<api-level>:latest`
 
 ### Included packages
 
@@ -84,4 +110,4 @@ The [new emulator 28.1.8 Canary](https://androidstudio.googleblog.com/2019/02/em
 
 ### Scheduled release
 
-The `android-emulator-<api-level>` images are automatically re-built and pushed **weekly** to package the latest stable version of the `emulator` SDK component which is updated frequently with improvements and bug fixes.
+All images are automatically re-built and pushed **weekly** to package the latest stable version of the SDK components.

@@ -1,4 +1,4 @@
-FROM reactivecircus/android-sdk:latest
+FROM reactivecircus/android-sdk-23:latest
 
 # Install packages
 RUN apt-get -qqy update && \

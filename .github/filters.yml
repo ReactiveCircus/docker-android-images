@@ -1,0 +1,9 @@
+base_image:
+  - android-sdk-*.Dockerfile
+  - publish_android_sdk_base_image.sh
+sdk_images:
+  - android-sdk-*.Dockerfile
+  - publish_android_sdk_image.sh
+emulator_images:
+  - android-emulator-*.Dockerfile
+  - publish_android_emulator_image.sh
