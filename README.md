@@ -38,20 +38,20 @@ Downloads Android SDK platform for a specific API level.
 
 `reactivecircus/android-sdk-<api-level>`
 
-### Availabel Images
+### Available images
 
 The following images are available on Docker Hub:
 
-- [android-emulator-21](https://hub.docker.com/r/reactivecircus/android-sdk-21/tags/)
-- [android-emulator-22](https://hub.docker.com/r/reactivecircus/android-sdk-22/tags/)
-- [android-emulator-23](https://hub.docker.com/r/reactivecircus/android-sdk-23/tags/)
-- [android-emulator-24](https://hub.docker.com/r/reactivecircus/android-sdk-24/tags/)
-- [android-emulator-25](https://hub.docker.com/r/reactivecircus/android-sdk-25/tags/)
-- [android-emulator-26](https://hub.docker.com/r/reactivecircus/android-sdk-26/tags/)
-- [android-emulator-27](https://hub.docker.com/r/reactivecircus/android-sdk-27/tags/)
-- [android-emulator-28](https://hub.docker.com/r/reactivecircus/android-sdk-28/tags/)
-- [android-emulator-29](https://hub.docker.com/r/reactivecircus/android-sdk-29/tags/)
-- [android-emulator-30](https://hub.docker.com/r/reactivecircus/android-sdk-30/tags/)
+- [android-sdk-21](https://hub.docker.com/r/reactivecircus/android-sdk-21/tags/)
+- [android-sdk-22](https://hub.docker.com/r/reactivecircus/android-sdk-22/tags/)
+- [android-sdk-23](https://hub.docker.com/r/reactivecircus/android-sdk-23/tags/)
+- [android-sdk-24](https://hub.docker.com/r/reactivecircus/android-sdk-24/tags/)
+- [android-sdk-25](https://hub.docker.com/r/reactivecircus/android-sdk-25/tags/)
+- [android-sdk-26](https://hub.docker.com/r/reactivecircus/android-sdk-26/tags/)
+- [android-sdk-27](https://hub.docker.com/r/reactivecircus/android-sdk-27/tags/)
+- [android-sdk-28](https://hub.docker.com/r/reactivecircus/android-sdk-28/tags/)
+- [android-sdk-29](https://hub.docker.com/r/reactivecircus/android-sdk-29/tags/)
+- [android-sdk-30](https://hub.docker.com/r/reactivecircus/android-sdk-30/tags/)
 
 ### Base image
 
