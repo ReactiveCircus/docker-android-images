@@ -20,11 +20,10 @@ Image versions (tags) can be found on [Docker Hub](https://hub.docker.com/r/reac
 
 ### Base image
 
-`ubuntu:bionic`
+`adoptopenjdk/openjdk14:ubuntu-slim`
 
 ### Included packages
 
-* `openjdk-14-jdk`
 * `curl`
 * `zip`
 * `unzip`
