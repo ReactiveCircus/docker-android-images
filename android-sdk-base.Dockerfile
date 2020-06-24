@@ -8,16 +8,16 @@ RUN apt-get -qqy update && \
     zip \
     unzip \
     git \
+    locales \
   && rm -rf /var/lib/apt/lists/*
 
 # Use unicode
-RUN locale-gen C.UTF-8 || true
-ENV LANG=C.UTF-8
+ENV LANG C.UTF-8
 
 ENV JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64/" \
     PATH=$PATH:$JAVA_HOME/bin
 
-ENV CMDLINE_TOOLS_URL="https://dl.google.com/android/repository/commandlinetools-linux-6514223_latest.zip"
+ENV CMDLINE_TOOLS_URL="https://dl.google.com/android/repository/commandlinetools-linux-6609375_latest.zip"
 ENV ANDROID_HOME="/usr/local/android-sdk"
 
 ENV ANDROID_SDK_ROOT=$ANDROID_HOME \
@@ -25,11 +25,10 @@ ENV ANDROID_SDK_ROOT=$ANDROID_HOME \
 
 # Download Android SDK
 RUN mkdir "$ANDROID_HOME" .android \
-    && cd "$ANDROID_HOME" \
-    && mkdir cmdline-tools \
-    && curl -o cmdline-tools/commandlinetools.zip $CMDLINE_TOOLS_URL \
-    && unzip cmdline-tools/commandlinetools.zip -d cmdline-tools \
-    && rm cmdline-tools/commandlinetools.zip
+    && mkdir -p "$ANDROID_HOME/cmdline-tools" \
+    && curl -o commandlinetools.zip $CMDLINE_TOOLS_URL \
+    && unzip commandlinetools.zip -d "$ANDROID_HOME/cmdline-tools" \
+    && rm commandlinetools.zip
 
 # Accept all licenses
 RUN yes | sdkmanager --licenses
