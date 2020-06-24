@@ -24,7 +24,7 @@ Image versions (tags) can be found on [Docker Hub](https://hub.docker.com/r/reac
 
 ### Included packages
 
-* `openjdk-8-jdk`
+* `openjdk-14-jdk`
 * `curl`
 * `zip`
 * `unzip`

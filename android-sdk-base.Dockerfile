@@ -3,7 +3,7 @@ FROM ubuntu:bionic
 # Install packages
 RUN apt-get -qqy update && \
     apt-get -qqy --no-install-recommends install \
-    openjdk-8-jdk \
+    openjdk-14-jdk \
     curl \
     zip \
     unzip \
@@ -14,7 +14,7 @@ RUN apt-get -qqy update && \
 # Use unicode
 ENV LANG C.UTF-8
 
-ENV JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64/" \
+ENV JAVA_HOME="/usr/lib/jvm/openjdk-14-jdk/" \
     PATH=$PATH:$JAVA_HOME/bin
 
 ENV CMDLINE_TOOLS_URL="https://dl.google.com/android/repository/commandlinetools-linux-6609375_latest.zip"
