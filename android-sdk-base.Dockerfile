@@ -1,4 +1,4 @@
-FROM adoptopenjdk/openjdk14:ubuntu-slim
+FROM adoptopenjdk/openjdk8:ubuntu-slim
 
 # Install packages
 RUN apt-get -qqy update && \

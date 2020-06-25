@@ -20,7 +20,7 @@ Image versions (tags) can be found on [Docker Hub](https://hub.docker.com/r/reac
 
 ### Base image
 
-`adoptopenjdk/openjdk14:ubuntu-slim`
+`adoptopenjdk/openjdk8:ubuntu-slim`
 
 ### Included packages
 
