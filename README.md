@@ -8,7 +8,7 @@ Downloads the Android SDK and installs build tools and platform tools.
 
 ### Image name
 
-`ubuntu:bionic`
+`reactivecircus/android-sdk-base`
 
 ### Image version
 
@@ -20,11 +20,11 @@ Image versions (tags) can be found on [Docker Hub](https://hub.docker.com/r/reac
 
 ### Base image
 
-`adoptopenjdk/openjdk8:ubuntu-slim`
+`ubuntu:bionic`
 
 ### Included packages
 
-* `openjdk-8-jdk`
+* `openjdk-14-jdk`
 * `curl`
 * `zip`
 * `unzip`
