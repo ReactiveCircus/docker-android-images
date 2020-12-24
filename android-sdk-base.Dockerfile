@@ -20,16 +20,15 @@ ENV JAVA_HOME="/usr/lib/jvm/java-14-openjdk-amd64/" \
     PATH=$PATH:$JAVA_HOME/bin
 
 ENV CMDLINE_TOOLS_URL="https://dl.google.com/android/repository/commandlinetools-linux-6609375_latest.zip"
-ENV ANDROID_HOME="/usr/local/android-sdk"
 
-ENV ANDROID_SDK_ROOT=$ANDROID_HOME \
-    PATH=${PATH}:${ANDROID_HOME}/cmdline-tools/tools:${ANDROID_HOME}/cmdline-tools/tools/bin:${ANDROID_HOME}/platform-tools
+ENV ANDROID_SDK_ROOT="/usr/local/android-sdk" \
+    PATH=${PATH}:${ANDROID_SDK_ROOT}/cmdline-tools/tools:${ANDROID_SDK_ROOT}/cmdline-tools/tools/bin:${ANDROID_SDK_ROOT}/platform-tools
 
 # Download Android SDK
-RUN mkdir "$ANDROID_HOME" .android \
-    && mkdir -p "$ANDROID_HOME/cmdline-tools" \
+RUN mkdir "$ANDROID_SDK_ROOT" .android \
+    && mkdir -p "$ANDROID_SDK_ROOT/cmdline-tools" \
     && curl -o commandlinetools.zip $CMDLINE_TOOLS_URL \
-    && unzip commandlinetools.zip -d "$ANDROID_HOME/cmdline-tools" \
+    && unzip commandlinetools.zip -d "$ANDROID_SDK_ROOT/cmdline-tools" \
     && rm commandlinetools.zip
 
 # Accept all licenses
