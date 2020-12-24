@@ -35,7 +35,7 @@ RUN mkdir "$ANDROID_SDK_ROOT" .android \
 RUN yes | sdkmanager --licenses
 
 # Install Android build tools and platform tools
-ENV ANDROID_BUILD_TOOLS_VERSION=30.0.2
+ENV ANDROID_BUILD_TOOLS_VERSION=30.0.3
 
 RUN touch ~/.android/repositories.cfg
 RUN sdkmanager --install "build-tools;${ANDROID_BUILD_TOOLS_VERSION}" \

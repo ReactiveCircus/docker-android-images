@@ -16,7 +16,7 @@ Image versions (tags) can be found on [Docker Hub](https://hub.docker.com/r/reac
 
 ### Current SDK Versions
 
-* Build tools - `30.0.2`
+* Build tools - `30.0.3`
 
 ### Base image
 
